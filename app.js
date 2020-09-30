@@ -32,9 +32,8 @@ app.post('/', function (req, res) {
   };
   const request = https.request(url, options, function (response) {
     if (response.statusCode === 200) {
-      res.sendFile(
-        'https://srishtytakyar.github.io/API_signup/files/index.html'
-      );
+      res.setHeader("Location", "https://srishtytakyar.github.io/API_signup/files/index.html");
+     
     } else {
       res.sendFile(
         'https://srishtytakyar.github.io/API_signup/files/failure.html'

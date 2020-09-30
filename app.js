@@ -32,9 +32,13 @@ app.post('/', function (req, res) {
   };
   const request = https.request(url, options, function (response) {
     if (response.statusCode === 200) {
-      res.sendFile(__dirname + 'files/index.html');
+      res.sendFile(
+        'https://srishtytakyar.github.io/API_signup/files/index.html'
+      );
     } else {
-      res.sendFile(__dirname + 'files/failure.html');
+      res.sendFile(
+        'https://srishtytakyar.github.io/API_signup/files/failure.html'
+      );
     }
 
     response.on('data', function (data) {
